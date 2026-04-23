@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lakshmi Narasimha Enterprises</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+}
+
+header {
+    background: linear-gradient(45deg, #007BFF, #00c6ff);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background: #222;
+    padding: 12px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 12px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 30px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid .card {
+    flex: 1 1 300px;
+}
+
+button {
+    background: green;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.highlight {
+    background: #28a745;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Lakshmi Narasimha Enterprises (Hyd)</h1>
+    <p>Worker Hiring Platform</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#rates">Worker Rates</a>
+    <a href="#apply">Apply</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="home">
+    <h2>Welcome</h2>
+
+    <div class="highlight">
+        🎉 Free Room Facility Available for Workers 🎉
+    </div>
+
+    <p>We hire skilled and fresher workers. Apply now and start earning.</p>
+</section>
+
+<section id="rates">
+    <h2>Worker Salary / Rate</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Helper (Fresher)</h3>
+            <p><b>₹550 per day</b></p>
+            <p>✔ 2 Sundays per month</p>
+            <p>✔ Sunday duty = extra OT pay</p>
+            <p>✔ OT extra pay</p>
+            <p>✔ Free Room Available</p>
+        </div>
+
+        <div class="card">
+            <h3>Welder</h3>
+            <p><b>₹650 - ₹800 per day</b></p>
+            <p>✔ 2 Sundays per month</p>
+            <p>✔ Sunday duty = extra OT pay</p>
+            <p>✔ Free Room Available</p>
+        </div>
+
+        <div class="card">
+            <h3>Fitter</h3>
+            <p><b>₹700 - ₹900 per day</b></p>
+            <p>✔ 2 Sundays per month</p>
+            <p>✔ Sunday duty = extra OT pay</p>
+            <p>✔ Free Room Available</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="apply">
+    <h2>Apply for Job</h2>
+
+    <form onsubmit="sendToWhatsApp(); return false;">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="tel" id="phone" placeholder="Your Mobile Number" required>
+
+        <select id="work">
+            <option>Helper</option>
+            <option>Welder</option>
+            <option>Fitter</option>
+        </select>
+
+        <textarea id="msg" placeholder="Experience / Details"></textarea>
+
+        <button type="submit">Submit & Apply</button>
+    </form>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>📱 Only WhatsApp Call / Message</p>
+    <p>📞 7250683526</p>
+
+    <a href="https://wa.me/917250683526">
+        <button>Chat on WhatsApp</button>
+    </a>
+</section>
+
+<footer>
+    <p>Prepared by Sachin Kumar</p>
+</footer>
+
+<script>
+function sendToWhatsApp() {
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let work = document.getElementById("work").value;
+    let msg = document.getElementById("msg").value;
+
+    let text = `New Worker Application:%0A
+Name: ${name}%0A
+Phone: ${phone}%0A
+Work: ${work}%0A
+Details: ${msg}`;
+
+    window.open(`https://wa.me/917250683526?text=${text}`, '_blank');
+}
+</script>
+
+</body>
+</html>
